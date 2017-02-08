@@ -1,0 +1,2 @@
+export const SET_LOADING = 'SET_LOADING_MUTATION'
+export const SET_RATES = 'SET_RATES_MUTATION'
