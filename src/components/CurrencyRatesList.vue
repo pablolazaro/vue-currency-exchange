@@ -3,10 +3,7 @@
      <div class="ui inverted dimmer" :class="{'active': isLoading}">
         <div class="ui text loader">Loading</div>
       </div>
-    <div class="ui info message">
-      Rates calculated against <b>{{ base }}</b> currency
-    </div>
-    <table class="ui sortable selectable teal table">
+    <table class="ui sortable disabled selectable teal table">
       <thead>
         <tr>
           <th @click="sortByCurrency" class="four wide">Currency</th>
@@ -14,7 +11,7 @@
         </tr>
       </thead>
       <transition-group name="rates-list" tag="tbody">
-        <tr v-for="item in rates" :key="item.currencyCode" @click="setBase(item.currencyCode)">
+        <tr v-for="item in rates" :key="item.currencyCode" @click="changeBase(item.currencyCode)">
           <td>
             <h4 class="ui image header">
               <span :class="getFlagClass(item)" class="flag-icon"></span>
@@ -37,7 +34,7 @@
 <script>
   export default {
     name: 'currency-rates-list',
-    props: ['rates', 'isLoading', 'base'],
+    props: ['rates', 'isLoading'],
     methods: {
       getFlagClass: function (currency) {
         return `flag-icon-${currency.countryCode.toLowerCase()}`
@@ -52,8 +49,8 @@
         this.sortByRateOrder = this.sortByRateOrder === 'asc' ? 'desc' : 'asc'
         this.sortByCurrencyOrder = 'asc'
       },
-      setBase: function (base) {
-        this.$emit('setBase', base)
+      changeBase: function (base) {
+        this.$emit('changeBase', base)
       }
     },
     data: function () {

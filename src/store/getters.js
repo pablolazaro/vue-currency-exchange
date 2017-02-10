@@ -1,5 +1,6 @@
 export default {
+  getBaseCurrency: (state) => state.baseCurrency,
   getRates: (state) => state.rates,
-  isLoading: (state) => state.isLoading,
-  getBaseCurrency: (state) => state.baseCurrency
+  hasError: (state) => state.hasError,
+  isLoading: (state) => state.isLoading
 }

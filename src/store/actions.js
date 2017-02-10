@@ -8,6 +8,7 @@ export default {
     commit(mutationTypes.SET_LOADING)
     RatesService.getRates(base)
       .then(rates => commit(mutationTypes.SET_RATES, { rates, base }))
+      .catch(error => commit(mutationTypes.SET_REQUEST_ERROR, error))
   },
   [ ORDER_RATES ] ({ state, commit }, { property, dir }) {
     let isAsc = dir === 'asc'

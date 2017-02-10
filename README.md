@@ -1,6 +1,14 @@
 # vue-currency-exchange
 
-> A Vue.js project
+> Currency exchange example application using Vue.js
+
+## Description
+
+This application is part of a proof of concept that tries to compare Angular and Vue.js.
+
+The *PoC* consists in develop the same simple web application using both technologies.
+
+You can see the application developed using Angular in [this repository](https://github.com/pablolazaro/ng-currency-exchange).
 
 ## Build Setup
 

@@ -9,8 +9,8 @@ import 'semantic-ui-css/semantic.min.css'
 import 'flag-icon-css/css/flag-icon.min.css'
 
 // JS
-// import 'jquery/dist/jquery.min.js'
-// import 'semantic-ui-css/semantic.min.js'
+import 'jquery/dist/jquery.min.js'
+import 'semantic-ui-css/semantic.min.js'
 
 /* eslint-disable no-new */
 new Vue({

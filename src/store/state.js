@@ -1,5 +1,6 @@
 export default {
   rates: [],
   isLoading: false,
-  baseCurrency: 'EUR'
+  baseCurrency: 'EUR',
+  hasError: false
 }
